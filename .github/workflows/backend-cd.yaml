@@ -94,7 +94,7 @@ jobs:
       - name: Deploy to EKS
         working-directory: starter/backend
         run: |
-          kubectl apply -f deployment.yaml
+          kubectl apply -k k8s
           kubectl set image deployment/backend backend=$(
             aws ecr describe-repositories \
               --repository-names backend \
