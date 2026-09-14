@@ -92,7 +92,7 @@ jobs:
       - name: Deploy to EKS
         working-directory: starter/frontend
         run: |
-          kubectl apply -f deployment.yaml
+          kubectl apply -k k8s
           kubectl set image deployment/frontend frontend=$(
             aws ecr describe-repositories \
               --repository-names frontend \
