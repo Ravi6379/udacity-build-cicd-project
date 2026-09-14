@@ -99,4 +99,4 @@ jobs:
               --region us-east-1 \
               --query 'repositories[0].repositoryUri' \
               --output text
-          )/frontend:${{ github.sha }}
+          ):${{ github.sha }}
